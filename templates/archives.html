@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatura Geçmişi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}" defer></script>
+
+</head>
+
+    
+
+
+    <body>
+
+        <h1 id="title">E-Fatura/E-Arşiv Fatura Otomasyon Sistemi</h1>
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Filename</th>
+                    <th>Vkntckn</th>
+                    <th>Avkntckn</th>
+                    <th>Senaryo</th>
+                    <th>Tip</th>
+                    <th>Tarih</th>
+                    <th>No</th>
+                    <th>Ettn</th>
+                    <th>Para birimi</th>
+                    <th>Mal-hizmet toplam</th>
+                    <th>Kdvmatrah</th>
+                    <th>Hesaplanan KDV</th>
+                    <th>Vergi dahil</th>
+                    <th>Odenecek</th> 
+                </tr>
+            </thead>
+            <tbody>
+                {% for archive in archives %}
+                <tr>
+                    <td>{{ archive.id }}</td>
+                    <td>{{ archive.filename }}</td>
+                    <td>{{ archive.vkntckn }}</td>
+                    <td>{{ archive.avkntckn }}</td>
+                    <td>{{ archive.senaryo }}</td>
+                    <td>{{ archive.tip }}</td>
+                    <td>{{ archive.tarih }}</td>
+                    <td>{{ archive.no }}</td>
+                    <td>{{ archive.ettn }}</td>
+                    <td>{{ archive.parabirimi }}</td>
+                    <td>{{ archive.malhizmettoplam }}</td>
+                    <td>{{ archive.kdvmatrah }}</td>
+                    <td>{{ archive.hesaplanankdv }}</td>
+                    <td>{{ archive.vergidahil }}</td>
+                    <td>{{ archive.odenecek }}</td>     
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+
+        <div class="pagination">
+            {% if page > 1 %}
+            <a href="{{ url_for('get_all_archives', page=1) }}">İlk sayfa</a>
+            <a href="{{ url_for('get_all_archives', page=page-1) }}">Önceki sayfa</a>
+            {% endif %}
+            
+            {% for p in range(1, pages + 1) %}
+                <a href="{{ url_for('get_all_archives', page=p) }}" class="{% if p == page %}active{% endif %}">{{ p }}</a>
+            {% endfor %}
+            
+            {% if page < pages %}
+            <a href="{{ url_for('get_all_archives', page=page+1) }}">Sonraki sayfa</a>
+            <a href="{{ url_for('get_all_archives', page=pages) }}">Son sayfa</a>
+            {% endif %}
+        </div>
+
+
+    </body>
+</html>

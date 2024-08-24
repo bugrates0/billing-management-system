@@ -1,0 +1,347 @@
+#title{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:#ce1619;
+}
+
+#not{
+    font-weight: bold;
+}
+
+/* Tablo stili */
+
+#faturaTablosu{
+    text-align: center;
+}
+
+#fileName{
+    color:#1c6c11
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Tablo başlıkları stili */
+th, td {
+    padding: 6px;
+    border: 1px solid #ddd;
+}
+
+/* Başlık hücreleri için stil */
+th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Satırların üzerine gelindiğinde arka plan rengini değiştirme */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Tabloyu merkeze hizalama */
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+caption {
+    font-size: 1.5em; /* Başlık boyutunu ayarla */
+    font-weight: bold; /* Kalın yazı tipi */
+    margin-bottom: 20px; /* Tablo ile başlık arasına boşluk ekle */
+}
+
+
+
+
+
+#writeToDB{
+    margin-top: 20px;
+    background-color: #ce1619;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+
+#writeToDB:hover{
+    background-color: #682424;
+}
+
+
+#writeToDB:focus {
+    outline: none;
+}
+
+#ManuelDbButton{
+    margin-top: 20px;
+    background-color: #ce1619;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+
+#ManuelDbButton:hover{
+    background-color: #682424;
+}
+
+
+#ManuelDbButton:focus {
+    outline: none;
+}
+
+
+#options{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#file-select{
+    width: 48%;
+    display: inline-block;
+    padding: 5%;
+    vertical-align: middle;
+}
+
+#buttons-menu{
+    width: 48%;
+    text-align: center;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+
+
+/* Form style */
+
+
+
+#upload-form {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+#fileInput {
+    width: 90%;
+    display: block;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+    background-color: #f9f9f9;
+}
+
+#upload-button{
+    background-color: #ce1619;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+
+#upload-button:hover{
+    background-color: #682424;
+}
+
+
+#upload-button:focus {
+    outline: none;
+}
+
+#past-archives-button{
+    background-color: #ce1619;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 25px;
+}
+
+
+#past-archives-button:hover{
+    background-color: #682424;
+}
+
+
+#past-archives-button:focus {
+    outline: none;
+}
+
+
+#about-button{
+    background-color: #ce1619;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 25px;
+}
+
+
+#about-button:hover{
+    background-color: #682424;
+}
+
+
+#about-button:focus {
+    outline: none;
+}
+
+#contact-button{
+    background-color: #ce1619;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 25px;
+}
+
+
+#contact-button:hover{
+    background-color: #682424;
+}
+
+
+#contact-button:focus {
+    outline: none;
+}
+
+
+
+
+#konteyner {
+    display: flex;
+    height: 1000px; /* Sayfanın yüksekliğinin tamamını kapla */
+    margin: 40px;
+}
+#dosyaGoruntuleme {
+    flex: 1; /* Ekranın yarısını kapla */
+    /*padding: 10px;  İsteğe bağlı padding */
+    box-sizing: border-box; /* Padding ve border'ı eleman boyutuna dahil et */
+    overflow: auto; /* İçerik taşarsa kaydırma çubuğu ekle */
+}
+#manuelVeriGirisFormu {
+    text-align: center;
+    flex: 1; /* Ekranın yarısını kapla */
+    padding: 10px; /* İsteğe bağlı padding */
+    box-sizing: border-box; /* Padding ve border'ı eleman boyutuna dahil et */
+    overflow: auto; /* İçerik taşarsa kaydırma çubuğu ekle */
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+.pagination {
+    margin: 20px 0;
+}
+.pagination a {
+    margin: 0 5px;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: #f2f2f2;
+    color: black;
+    border-radius: 5px;
+}
+.pagination a.active {
+    background-color: #ce1619;
+    color: white;
+}
+.pagination a:hover {
+    background-color: #ddd;
+}
+
+
+/* Modal arka planı */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Arka planın kararması */
+}
+
+/* Modal içeriği */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Kapatma butonu */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #ce1619;
+    text-decoration: none;
+    cursor: pointer;
+}

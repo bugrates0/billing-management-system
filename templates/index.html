@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatura Otomasyon Sistemi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}" defer></script>
+
+</head>
+
+    <body>
+
+
+
+        <h1 id="title">E-Fatura/E-Arşiv Fatura Otomasyon Sistemi</h1>
+
+
+        <div id="options">  
+            
+            <div id="file-select">
+
+                <form id="upload-form" enctype="multipart/form-data">
+                    <label id="not" for ="myfile">Görüntülemek istediğiniz faturayı seçiniz. (PDF-PNG-JPEG-JPG)   </label><br>
+                    <input type="file" id="fileInput" name="file"/><br>
+                    <button type="submit" id="upload-button">Görüntüle</button><br>
+                </form>
+
+
+
+            </div>
+
+
+            <div id= "buttons-menu">
+
+
+                <button type="button" id="past-archives-button">Kaydedilmiş Faturalar</button><br>
+                <button type="button" id="about-button">Uygulama Hakkında</button><br>
+                <button type="button" id="contact-button">İletişim</button><br>
+                
+    
+            </div>
+
+
+        </div>
+
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="close">&times;</span>
+                <p id="modal-text"></p>
+            </div>
+        </div>
+        
+
+        
+
+
+
+        <div id="faturaTablosu"></div>
+
+
+        <div id="notification" style="position: fixed; top: 20px; right: 20px; z-index: 1000;"></div>
+
+
+        <div id="konteyner">
+
+            <div id="dosyaGoruntuleme"></div>
+            
+            <div id="manuelVeriGirisFormu"></div>
+
+        </div>
+
+
+    </body>
+</html>
