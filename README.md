@@ -1,6 +1,10 @@
 # <h1 align="center"> :scroll: **Billing Management System** :page_with_curl: </h1>
 
- ###     Bu uygulama, şirketlerin e-arşiv ve e-fatura takiplerini kolaylaştırmak için geliştirilmiştir.
+ ###     Bu uygulama, şirketlerin e-arşiv ve e-fatura takiplerini kolaylaştırmak için geliştirilmiştir. 2023 yılından bu yana e-arşiv ve e-fatura gibi e-belgelerde QR kodu zorunluluğu getirilmiştir. Bu QR kodu yapılan işlemle ilgili mali ve tarihsel bilgiler içermektedir. Bu uygulama sayesinde şirketler ellerinde bulunan e-arşiv ve e-faturalarını kolayca bir veritabanında saklayabilecek ve ileri geliştirmelerle birlikte gelir-gider takibini görselleştirme ve analiz etme şansına sahip olabilecektir.
+
+- Uygulamanın backendi Flask(Python) kullanılarak, frontendi ise HTML-CSS-JS kullanılarak geliştirilmiştir. 
+- Sisteme yüklenen pdf veya resim dosyalarındaki QR kod ***pyzbar*** kütüphanesi sayesinde okunmaktadır.
+- QR kodun okunamadığı dosyalar için sistemi kullanan kişiye manuel girme menüsü açılmaktadır.
 
 ___
 
@@ -18,3 +22,18 @@ ___
 
 
 
+___
+
+## :file_folder: Kurulum
+- Uygulamayı .zip olarak indirin.
+- Ana dosyaların bulunduğu klasörü VS Code ile açın.
+- **python -m venv .venv** komutuyla bir sanal ortam oluşturun.
+- **.venv\Scripts\activate** komutuyla sanal ortamı aktifleştirin
+- **pip install -r requirements.txt** komutuyla sanal ortama gerekli kütüphaneleri yükleyin.
+- Klasörün içinde .env adında bir dosya oluşturun. İçine aşağıdaki gibi PostgreSQL veritabanı adresini girin.
+
+  SECRET_KEY=super secret key
+  
+  DATABASE_URL=postgresql://KULLANICIADI:SIFRE@localhost:5432/VERITABANIISMI
+
+- **flask --app main run** komutuyla uygulamayı çalıştırın.
